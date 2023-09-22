@@ -8,10 +8,6 @@ jobs:
   release:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [18.x]
-
     steps:
       - uses: actions/checkout@v3
         with:
@@ -20,60 +16,16 @@ jobs:
 
       - uses: fregante/setup-git-user@v1
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version-file: '.node-version'
 
       - name: Build
         run: |
           npm ci
           npm run build
 
-      #- name: Build JSON packs
-      #  run: npm run build:packs:json
-
-      - id: nextversion
-        name: next release version
-        uses: jenkins-x-plugins/jx-release-version@v2.7.0
-        with:
-          next-version: increment:minor
-          output-format: '{{.Major}}.{{.Minor}}'
-          tag: false
-          push-tag: false
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: update versions
+      - name: Release
         run: |
-          jq 'version = "${{ steps.nextversion.outputs.version }}.0"' package.json
-          jq 'version = ${{ steps.nextversion.outputs.version }}' system.json
-          npm install
-
-      - uses: EndBug/add-and-commit@v9 # You can change this to use a specific version.
-        with:
-          add: 'package.json system.json package-lock.json'
-          push: true
-          message: "chore(release): ${{ steps.nextversion.outputs.version }} [skip ci]"
-          tag: 'v${{ steps.nextversion.outputs.version }}'
-
-      - name: Zip Files
-        # working-directory: ./dist
-        run: zip -r ./honey-heist.zip LICENSE.txt README.md credits.md lang module package.json release-notes.txt resources styles system.json template.json templates
-
-      #- name: Zip JSON Assets
-      #  working-directory: ./json-assets
-      #  run: |
-      #    cp -r ../static/lang/ ./
-      #    zip -r ./json-assets.zip ./*
-
-      - name: Create Version Release
-        id: create_version_release
-        uses: ncipollo/release-action@v1
-        with:
-          name: ${{ steps.nextversion.outputs.version }}
-          allowUpdates: false
-          draft: false
-          prerelease: false
-          token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: "./dist/system.json,./dist/honey-heist.zip"
-          tag: v${{ steps.nextversion.outputs.version }}
+          npx semantic-release
