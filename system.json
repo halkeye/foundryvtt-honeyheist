@@ -2,7 +2,7 @@
 	"id": "honey-heist",
 	"title": "Honey Heist",
 	"description": "It's HoneyCon. You are going to undertake the greatest heist the world has ever seen.",
-	"version": 0.1,
+	"version": 1.30,
 	"templateVersion": 2,
 	"compatibility": {
 		"minimum": "10",
@@ -17,8 +17,12 @@
 			"name": "halkeye"
 		}
 	],
-	"esmodules": [ "module/main.js" ],
-	"styles": [ "styles/main.css" ],
+	"esmodules": [
+		"module/main.js"
+	],
+	"styles": [
+		"styles/main.css"
+	],
 	"packs": [],
 	"languages": [
 		{

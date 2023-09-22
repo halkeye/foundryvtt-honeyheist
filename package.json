@@ -1,6 +1,6 @@
 {
   "name": "honey-heist",
-  "version": "1.0.0",
+  "version": "1.30.0",
   "description": "CSS compiler for the Honey Heist system",
   "scripts": {
     "css": "gulp css",
