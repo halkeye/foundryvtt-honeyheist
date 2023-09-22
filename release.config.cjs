@@ -58,6 +58,20 @@ module.exports = {
               }
             ],
             "countMatches": true
+          },
+          {
+            "files": ["system.json"],
+            "from": "\"download\": .*,",
+            "to": "\"download\": \"https://github.com/halkeye/foundryvtt-honeyheist/releases/download/${nextRelease.version}/honey-heist.zip\",",
+            "results": [
+              {
+                "file": "system.json",
+                "hasChanged": true,
+                "numMatches": 1,
+                "numReplacements": 1
+              }
+            ],
+            "countMatches": true
           }
         ]
       }
