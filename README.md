@@ -7,6 +7,12 @@ Two: You are a GODDAMN BEAR
 
 ![Honey Heist Screenshot](https://github.com/jbhaywood/foundryvtt-honeyheist/blob/master/resources/images/screenshot.png?raw=true "Honey Heist Screenshot")
 
+Installation Link: 
+
+```
+https://raw.githubusercontent.com/halkeye/foundryvtt-honeyheist/releases/latest/download/system.json
+```
+
 ## Description
 Honey Heist is a one-page RPG by Grant Howitt available to download for free [here](https://gshowitt.itch.io/honey-heist). The system includes a character sheet for players and roll tables for the GM.
 
