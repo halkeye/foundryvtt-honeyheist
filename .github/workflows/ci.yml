@@ -4,9 +4,8 @@ on:
   pull_request:
     branches: [master]
   push:
-    branches: [master, release-v9]
   workflow_dispatch:
-    branches: [master, release-v9]
+    branches: [master]
 
 jobs:
   build:
