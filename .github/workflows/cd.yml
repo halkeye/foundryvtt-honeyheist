@@ -1,8 +1,9 @@
 name: Honey Heist CD
 
 on:
-  workflow_dispatch:
-    branches: [release]
+  push:
+    branches:
+      - master
 
 jobs:
   release:
