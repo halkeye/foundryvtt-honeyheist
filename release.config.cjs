@@ -68,7 +68,7 @@ module.exports = {
           {
             "files": ["system.json"],
             "from": "\"download\": .*,",
-            "to": "\"download\": \"https://github.com/halkeye/foundryvtt-honeyheist/releases/download/${nextRelease.version}/honey-heist.zip\",",
+            "to": "\"download\": \"https://github.com/halkeye/foundryvtt-honeyheist/releases/download/v${nextRelease.version}/honey-heist.zip\",",
             "results": [
               {
                 "file": "system.json",
