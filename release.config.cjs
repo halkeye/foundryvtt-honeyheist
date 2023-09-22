@@ -65,7 +65,7 @@ module.exports = {
     [
       "@semantic-release/exec",
       {
-        "prepareCmd": "run: zip -r ./honey-heist.zip LICENSE.txt README.md credits.md lang module package.json release-notes.txt resources styles system.json template.json templates"
+        "prepareCmd": "zip -r ./honey-heist.zip LICENSE.txt README.md credits.md lang module package.json release-notes.txt resources styles system.json template.json templates"
       }
     ],
     [
