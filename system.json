@@ -2,7 +2,7 @@
 	"id": "honey-heist",
 	"title": "Honey Heist",
 	"description": "It's HoneyCon. You are going to undertake the greatest heist the world has ever seen.",
-	"version": 1.30,
+	"version": "1.0.0",
 	"templateVersion": 2,
 	"compatibility": {
 		"minimum": "10",
