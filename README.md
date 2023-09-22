@@ -1,17 +1,20 @@
 # Honey Heist
 
-It’s Honeycon. You are going to undertake the greatest heist the world has ever seen. 
-Two Things – 
+Installation Link:
+
+```
+https://github.com/halkeye/foundryvtt-honeyheist/releases/download/latest/system.json
+```
+
+It’s Honeycon. You are going to undertake the greatest heist the world has ever seen.
+
+Two Things –
+
 One: You have a complex plan that requires precise timing.
+
 Two: You are a GODDAMN BEAR
 
 ![Honey Heist Screenshot](https://github.com/jbhaywood/foundryvtt-honeyheist/blob/master/resources/images/screenshot.png?raw=true "Honey Heist Screenshot")
-
-Installation Link: 
-
-```
-https://raw.githubusercontent.com/halkeye/foundryvtt-honeyheist/releases/latest/download/system.json
-```
 
 ## Description
 Honey Heist is a one-page RPG by Grant Howitt available to download for free [here](https://gshowitt.itch.io/honey-heist). The system includes a character sheet for players and roll tables for the GM.
