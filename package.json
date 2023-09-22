@@ -5,7 +5,8 @@
   "scripts": {
     "css": "gulp css",
     "watch": "gulp",
-    "gulp": "gulp"
+    "gulp": "gulp",
+    "build": "gulp css"
   },
   "browserslist": [
     "last 3 versions"
