@@ -3,7 +3,7 @@
 Installation Link:
 
 ```
-https://github.com/halkeye/foundryvtt-honeyheist/releases/download/latest/system.json
+https://github.com/halkeye/foundryvtt-honeyheist/releases/latest/download/system.json
 ```
 
 It’s Honeycon. You are going to undertake the greatest heist the world has ever seen.
